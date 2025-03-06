@@ -50,9 +50,9 @@ const upload = multer({
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 const allowedOrigins = [
-    "http://localhost:5173",
-    "http://localhost:5174",
-    process.env.FRONTEND_URL || "https://your-app-name.netlify.app"
+    "https://campuslink-5ms4.onrender.com",
+    "https://campuslink-5ms4.onrender.com",
+    process.env.FRONTEND_URL || "https://campuslinkcu.netlify.app"
 ];
 
 app.use(cors({
@@ -150,7 +150,7 @@ app.post('/api/upload', authenticateToken, upload.single('image'), async (req, r
 
         const baseUrl = process.env.NODE_ENV === 'production' 
             ? process.env.SERVER_URL 
-            : `http://localhost:${process.env.PORT || 3000}`;
+            : `https://campuslink-5ms4.onrender.com}`;
 
         const imageUrl = `${baseUrl}/uploads/${req.file.filename}`;
         res.json({ url: imageUrl });

@@ -20,7 +20,7 @@ function Chat({ username, onLogout }) {
 
     useEffect(() => {
         // Initialize socket connection
-        socket = io('http://localhost:5001', {
+        socket = io('https://campuslink-5ms4.onrender.com', {
             auth: { token: localStorage.getItem('token') }
         });
 
@@ -112,7 +112,7 @@ function Chat({ username, onLogout }) {
             formData.append('image', file);
 
             // Upload image to server
-            const response = await fetch('http://localhost:5001/api/upload', {
+            const response = await fetch('https://campuslink-5ms4.onrender.com/api/upload', {
                 method: 'POST',
                 body: formData,
                 headers: {

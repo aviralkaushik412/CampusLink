@@ -14,7 +14,7 @@ function Login({ onLogin, onSwitchToRegister }) {
         setIsLoading(true);
 
         try {
-            const response = await fetch('http://localhost:5001/api/login', {
+            const response = await fetch('https://campuslink-5ms4.onrender.com/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
