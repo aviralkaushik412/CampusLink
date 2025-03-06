@@ -86,7 +86,7 @@ const io = new Server(server, {
 // MongoDB connection with retry logic
 const connectDB = async (retries = 5) => {
     try {
-        await mongoose.connect(MONGO_URI);
+        await mongoose.connect(process.env.MONGO_URI);
 
         console.log('✅ MongoDB connected successfully');
     } catch (err) {
