@@ -1,0 +1,89 @@
+/* src/App.css */
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.messages {
+  /* border: 1px solid #ccc; */
+  min-height: 300px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.message {
+  margin: 5px 0;
+  padding: 5px;
+  /* background: #f0f0f0; */
+  /* border-radius: 3px; */
+}
+
+.timestamp {
+  color: #666;
+  margin-right: 5px;
+}
+
+.username {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.message-form {
+  display: flex;
+  gap: 10px;
+}
+
+.message-form input {
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.message-form button {
+  padding: 5px 15px;
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.auth-form h2 {
+  margin-bottom: 20px;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-form input {
+  padding: 8px;
+}
+
+.auth-form button {
+  padding: 8px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background: #0056b3;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
